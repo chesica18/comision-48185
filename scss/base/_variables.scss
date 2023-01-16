@@ -1,0 +1,116 @@
+//! VARIABLES
+//* Las formas en las que los desarrolladores le daban nombre a un valor para poder reutilizarlo, actualizarlo cuando se necesite o simplemente registrar un valor.
+//* Espacios reservados de memoria para almacenar datos (nos sirven para guardar informacion)
+
+$color-princial: blue;
+$color-secundario: red;
+
+//! LISTAS
+$colores:
+red,
+green,
+blue,
+tomato,
+pink,
+gray;
+
+$font-size:
+12px,
+16px,
+20px,
+30px;
+
+h1{
+    font-size: nth($font-size ,4);
+    color: nth($colores, 5);
+}
+
+
+//! OPERACIONES
+// OPERADORES ARITMETICOS + - * /
+$ancho:720px;
+img{
+    width: $ancho / 2 + 10;
+}
+
+
+//! MAPAS
+
+$button:(
+    //DENTRO DEL MAP TENEMOS SIEMPRE UN JUEGO DE PARES
+    // KEY - VALUE(VALOR)
+    bg-boton:rgb(177, 29, 29),
+    color-text:rgb(11, 11, 11),
+    padd:10px,
+    deco:none,
+);
+
+//! EXTENDS
+// PLACEHOLDER = %
+
+%flex {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.galeria{
+    background-color: aqua;
+    border: 2px solid red;
+    @extend %flex;
+}
+
+.galeria-2{
+    background-color: blueviolet;
+    border: 2px solid yellow;
+    @extend %flex;
+}
+
+
+//! MIXINS
+
+// @mixin flex{
+//     display: flex;
+//     justify-content: center;
+// }
+
+
+@mixin flex ($flex, $justify, $align, $direction, $wrap){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+
+//! CONDICIONALES
+//OPERADORES DE COMPARACION
+// == son iguales
+// != es diferente
+// > mayor que
+// < menor que
+// >= mayor o igual
+// <= menor o igual
+
+
+// if (condicional){
+//     //se ejecuta lo que esta aca
+// }else{
+//     //se ejecuta lo que esta aca
+// }
+
+@mixin modos ($darkmode){
+    @if $darkmode == black{
+        border: solid 2px blueviolet;
+        background-color: black;
+    }@else{
+        border: 2px solid aqua;
+        background-color: white;
+    }
+}
+
+.bg-condicional{
+    @include modos (yellow);
+}

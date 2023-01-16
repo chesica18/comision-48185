@@ -8,7 +8,7 @@
 
 /*----------HEADER----------*/
 header{
-    background-color: rgb(139, 39, 160);
+    background-color: black;
     position: sticky;
     top:0;
     z-index: 1;
@@ -18,11 +18,16 @@ header{
     padding: 15px;
 }
 
+
 header h1{
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: white;
+}
+
+header h1 span{
+    color: rgb(97, 30, 30);
 }
 
 header nav ul{
@@ -99,6 +104,10 @@ header nav ul li a:hover{
 
 .bienvenidos div h2{
     font-size: 50px;
+}
+
+.bienvenidos div h2 span{
+    color: rgb(97, 30, 30);
 }
 
 .bienvenidos img{

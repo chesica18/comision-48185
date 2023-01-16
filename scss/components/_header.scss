@@ -1,0 +1,38 @@
+/*----HEADER-----*/
+header{
+    background-color: black;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    h1{
+        font-size: 3rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: white;
+        span{
+            color: rgb(97, 30, 30);
+        }
+    }
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                margin: 10px 15px 10px 15px;
+                a{
+                    text-decoration:none;
+                    color: rgb(255, 255, 255);
+                    transition: 1s;
+                    &:hover{
+                        color: rgb(97, 30, 30);
+                    }
+                }
+            }
+        }
+    }
+
+}
